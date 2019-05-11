@@ -25,13 +25,13 @@ function gitsquash() {
 	git push -f
 }
 
-function gitbackup() {
+function gitsave() {
 	git reset --mixed HEAD~$1
 	git add --a
 	git stash
 }
 
-function gitapplybackup() {
+function gitapply() {
 	git stash apply stash@{0}
 	t=$(git rev-list --count HEAD)
 	git add --a

@@ -1,0 +1,76 @@
+alignment top_right
+background yes
+use_xft yes
+xftfont GE Inspira:size=12
+xftalpha 1
+update_interval 1
+total_run_times 0
+own_window yes
+own_window_type desktop
+own_window_transparent no
+own_window_class conky-semi
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+own_window_argb_value 0
+double_buffer yes
+minimum_size 400 0
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color ACE4F4
+default_shade_color DimGray
+default_outline_color DimGray
+
+gap_x 20
+gap_y 20
+
+stippled_borders 1
+border_inner_margin 4
+border_width 5
+
+no_buffers no
+uppercase no
+cpu_avg_samples 8
+#net_avg_samples 1
+#override_utf8_locale yes
+use_spacer right
+text_buffer_size 256
+
+TEXT
+${font bold}PROCESSES ${hr 2}
+NAME            $alignr PID        CPU%   MEM%$font
+${top name 1} $alignr${top pid 1}           ${top cpu 1}           ${top mem 1}
+${top name 2} $alignr${top pid 2}           ${top cpu 2}           ${top mem 2}
+${top name 3} $alignr${top pid 3}           ${top cpu 3}           ${top mem 3}
+${top name 4} $alignr${top pid 4}           ${top cpu 4}           ${top mem 4}
+${top name 5} $alignr${top pid 5}           ${top cpu 5}           ${top mem 5}
+${top name 6} $alignr${top pid 6}           ${top cpu 6}           ${top mem 6}
+${top name 7} $alignr${top pid 7}           ${top cpu 7}           ${top mem 7}
+${top name 8} $alignr${top pid 8}           ${top cpu 8}           ${top mem 8}
+${top name 9} $alignr${top pid 9}           ${top cpu 9}           ${top mem 9}
+${hr 2}
+${top_mem name 1} $alignr${top_mem pid 1}           ${top_mem cpu 1}           ${top_mem mem 1}
+${top_mem name 2} $alignr${top_mem pid 2}           ${top_mem cpu 2}           ${top_mem mem 2}
+${top_mem name 3} $alignr${top_mem pid 3}           ${top_mem cpu 3}           ${top_mem mem 3}
+${top_mem name 4} $alignr${top_mem pid 4}           ${top_mem cpu 4}           ${top_mem mem 4}
+${top_mem name 5} $alignr${top_mem pid 5}           ${top_mem cpu 5}           ${top_mem mem 5}
+${top_mem name 6} $alignr${top_mem pid 6}           ${top_mem cpu 6}           ${top_mem mem 6}
+${top_mem name 7} $alignr${top_mem pid 7}           ${top_mem cpu 7}           ${top_mem mem 7}
+${top_mem name 8} $alignr${top_mem pid 8}           ${top_mem cpu 8}           ${top_mem mem 8}
+${top_mem name 9} $alignr${top_mem pid 9}           ${top_mem cpu 9}           ${top_mem mem 9}
+
+${hr 4}
+${font bold:size=14}Sublime Text$font
+${hr 1}
+${font bold}Ctrl + Shit + T $font$alignr Launch the Terminal
+${font bold}Ctrl + Alt + F $font$alignr Format the code
+${hr 4}
+${font bold:size=14}Terminal$font
+${hr 1}
+${font bold}gitforce $font$alignr add/commit ammend
+${font bold}gitupload $font  <string> $alignr add/commit -m
+${font bold}gitback $font      <int> $alignr reset
+${font bold}gitsquash $font  <int> $alignr reset/squash
+${font bold}gitsave $font      <int> $alignr reset/stash
+${font bold}gitapply$font      <string> $alignr stash apply

@@ -1,0 +1,11 @@
+#/home/edouard/.local/share/applications/gmail.desktop
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Gmail
+Icon=/home/edouard/gmail-linux-x64/resources/app/icon.png
+Exec=/home/edouard/gmail-linux-x64/gmail
+Comment=Gmail
+Categories=Network;
+Terminal=false
+StartupWMClass=gmail

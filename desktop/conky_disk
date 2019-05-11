@@ -1,0 +1,49 @@
+background yes
+use_xft yes
+xftfont GE Inspira:size=12
+xftalpha 0.1
+update_interval 1
+total_run_times 0
+own_window yes
+own_window_type desktop
+own_window_transparent no
+own_window_class conky-semi
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+own_window_argb_value 0
+double_buffer yes
+minimum_size 280 5
+maximum_width 400
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color 7F8786
+default_shade_color DimGray
+default_outline_color DimGray
+alignment top_left
+
+
+gap_x 20
+gap_y 745
+
+stippled_borders 3
+border_inner_margin 4
+border_width 5
+
+no_buffers no
+uppercase no
+cpu_avg_samples 8
+#override_utf8_locale yes
+use_spacer right
+text_buffer_size 256
+
+TEXT
+DISK ${hr 2}
+/home $alignc  $alignr ${fs_used /home} / ${fs_size /home}
+${fs_bar /home}
+Disk I/O: ${diskio}
+Read:
+${diskiograph_read 20,280 DimGray DimGray 750}
+Write:
+${diskiograph_write 20,280 DimGray DimGray 750}

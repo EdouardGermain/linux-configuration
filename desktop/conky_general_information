@@ -1,0 +1,39 @@
+background yes
+use_xft yes
+xftfont Ubuntu:size=12
+xftalpha 1
+update_interval 1
+total_run_times 0
+own_window yes
+own_window_type desktop
+own_window_transparent no
+own_window_class conky-semi
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+own_window_argb_value 0
+double_buffer yes
+minimum_size 280 5
+maximum_width 400
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color ACE4F4
+default_shade_color DimGray
+default_outline_color DimGray
+alignment bottom_left
+
+gap_x 20
+gap_y 15
+
+
+no_buffers no
+uppercase no
+cpu_avg_samples 8
+override_utf8_locale yes
+use_spacer right
+text_buffer_size 256
+
+TEXT
+${if_up wlp2s0}${voffset -5}${font Font Awesome 5 Free:style=Solid:size=14}$font${offset 5}${wireless_essid wlp2s0}${offset 15}${offset 20}${font Font Awesome 5 Free:style=Solid:size=14}$font${offset 5}${voffset -2}${upspeed wlp2s0}$alignr${voffset -1}${downspeed wlp2s0}${offset 3}${font Font Awesome 5 Free:style=Solid:size=14}$font${else}${font Font Awesome 5 Free:style=Solid:size=14}$font${offset 5}${voffset -2}No connection $endif
+${voffset 6}${battery_percent BAT0}%${offset 5}${voffset -2}${font Font Awesome 5 Free:style=Solid:size=16}${if_match ${battery_percent BAT0}>90}${else}${if_match ${battery_percent BAT0}>65}${else}${if_match ${battery_percent BAT0}>35}${else}${if_match ${battery_percent BAT0}>10}${else}$endif$endif$endif$endif $font ${offset 16}${voffset -2}$memperc%$font ${offset 2}${voffset -2}${font Font Awesome 5 Free:style=Solid:size=16}$font$alignr${voffset -2}${cpu cpu0}%${offset 8}${voffset -2}${font Font Awesome 5 Free:style=Solid:size=16}$font${offset 8}${voffset -2}${hwmon 3 temp 1}°${offset 3}${font Font Awesome 5 Free:style=Solid:size=12}$font
