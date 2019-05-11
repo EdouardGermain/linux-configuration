@@ -1,0 +1,41 @@
+#!/bin/sh
+
+function gitforce() {
+	git add --a
+	git commit --amend --no-edit
+	git push -f;
+}
+
+function gitupload() {
+	t=$(git rev-list --count HEAD)
+	git add --a
+	git commit -m "#$t : $*" 
+	git push
+}
+
+function gitback() {
+	git reset --mixed HEAD~$@
+}
+
+function gitsquash() {
+	git reset --mixed HEAD~$1
+	t=$(git rev-list --count HEAD)
+	git add --a
+	git commit -m "#$t [$1 squashed]: $2" 
+	git push -f
+}
+
+function gitbackup() {
+	git reset --mixed HEAD~$1
+	git add --a
+	git stash
+}
+
+function gitapplybackup() {
+	git stash apply stash@{0}
+	t=$(git rev-list --count HEAD)
+	git add --a
+	git commit -m "#$t [backup]: $*" 
+	git push -f
+}
+

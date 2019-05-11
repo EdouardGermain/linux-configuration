@@ -1,0 +1,6 @@
+#!/bin/sh
+
+git config --global user.email "email@emial.fr"
+git config --global user.name "name"
+git config --global alias.force '!f(){ git commit -a --amend --no-edit && git push -f; }; f'
+git config --global alias.upload '!f(){ git add --a && git commit -m "$*" && git push; }; f'
