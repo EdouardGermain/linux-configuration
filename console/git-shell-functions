@@ -38,4 +38,3 @@ function gitapply() {
 	git commit -m "#$t [backup]: $*" 
 	git push -f
 }
-

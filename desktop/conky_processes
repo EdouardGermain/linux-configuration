@@ -68,9 +68,19 @@ ${font bold}Ctrl + Alt + F $font$alignr Format the code
 ${hr 4}
 ${font bold:size=14}Terminal$font
 ${hr 1}
-${font bold}gitforce $font$alignr add/commit ammend
+${font bold}gitforce $font$alignr add/commit amend
 ${font bold}gitupload $font  <string> $alignr add/commit -m
-${font bold}gitback $font      <int> $alignr reset
+#${font bold}gitback $font      <int> $alignr reset
 ${font bold}gitsquash $font  <int> $alignr reset/squash
 ${font bold}gitsave $font      <int> $alignr reset/stash
 ${font bold}gitapply$font      <string> $alignr stash apply
+
+#${font bold}nmap -sP edouardg.fr
+
+#${font bold}nslookup edouardg.fr
+
+#${font bold}traceroute $font$alignr -I edouardg.fr
+#${font bold}tcpdump $font$alignr -i wlp2s0
+#${font bold}tcpdump $font$alignr dst port 80
+#${font bold}tcpdump $font$alignr src port 80
+#${font bold}tcpdump $font$alignr src 192.168.0.1

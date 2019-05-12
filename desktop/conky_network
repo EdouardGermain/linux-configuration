@@ -42,9 +42,9 @@ TEXT
 NETWORK ${hr 2}
 
 SSID: $alignr ${wireless_essid wlp2s0}
-Public IP  : $alignr${exec cat /home/edouard/.config/ip}
-Local IP on wlan $alignr ${addr wlp2s0}
-WiFi Signal: ${alignr}${wireless_link_bar 6, 140 wlp2s0}
+Public IP $alignr${exec cat /home/edouard/.config/ip}
+Local IP $alignr ${addr wlp2s0}
+WiFi Signal ${alignr}${wireless_link_bar 6, 140 wlp2s0}
 
 Up $alignr${upspeed wlp2s0}
 ${upspeedgraph wlp2s0 20,280 DimGray DimGray}
